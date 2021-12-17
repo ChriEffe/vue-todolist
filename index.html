@@ -10,30 +10,31 @@
     <title>Document</title>
 </head>
 <body>
-    <main>
+    <main id='app'>
 
         <!-- left navbar -->
         <div class="left-navbar">
         <ul>
             <li>Christian Ferrazzano</li>
-            <li>My Day</li>
-            <li>To-Do</li>
-            <li>Groceries</li>
-            <li>Work</li>
-            <li>Movies to Watch</li>
-            <li>Family</li>
-            <li>Travel</li>
-            <li>New List</li>
+            <li>La mia giornata</li>
+            <li>Cose da fare</li>
+            <li>Cibo</li>
+            <li>Lavoro</li>
+            <li>Film da guardare</li>
+            <li>Famiglia</li>
+            <li>Viaggi</li>
+            <li>Nuova lista</li>
         </ul>
         </div>
             <!-- main content -->
             <div class="main-content">
-                <div id="myDIV" class="main-header">
+                <div class="main-header">
                     <h2 style="margin:5px">To Do</h2>
-                    <input type="text" id="myInput" placeholder="Title...">
-                    <span class="addBtn">Add</span>
+                    <input type="text" id="myInput" placeholder="Nuovo to-do">
+                    <span class="addBtn">Aggiungi</span>
                 </div>
-                <ul>
+                <ul v-for='element in todos'>
+                    <li :class="(element.done == true) ? 'check' : ''">{{ element.text}}</li>
                 </ul>
             </div>
     </main>
