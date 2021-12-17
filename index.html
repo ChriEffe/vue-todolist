@@ -36,7 +36,10 @@
                 <ul>
                     <li v-for='(element, index) in todos' class="flex">
                         <h3 :class="(element.done == true) ? 'check' : ''">{{ element.text }}</h3>
-                        <i @click='removeTodo' class="fas fa-times"></i>
+                        <div>
+                            <i @click="doneTodo(index)" class="fas fa-check"></i>
+                            <i @click='removeTodo' class="fas fa-times"></i>
+                        </div>
                     </li>
                 </ul>
             </div>
