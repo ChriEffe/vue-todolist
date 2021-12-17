@@ -33,8 +33,11 @@
                     <input type="text" id="myInput" placeholder="Nuovo to-do">
                     <span class="addBtn">Aggiungi</span>
                 </div>
-                <ul v-for='element in todos'>
-                    <li :class="(element.done == true) ? 'check' : ''">{{ element.text}}</li>
+                <ul>
+                    <li v-for='(element, index) in todos' class="flex">
+                        <h3 :class="(element.done == true) ? 'check' : ''">{{ element.text }}</h3>
+                        <i @click='removeTodo' class="fas fa-times"></i>
+                    </li>
                 </ul>
             </div>
     </main>

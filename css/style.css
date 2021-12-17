@@ -65,7 +65,7 @@ h1  {
     line-height: 2em;
     font-size: 2em;
     border-bottom: 1px solid black;
-    padding-left: 2px;
+    padding: 0 1em;
 }
 
 /* input */
@@ -98,4 +98,10 @@ input {
 
 .check  {
     text-decoration: line-through;
+}
+
+.flex  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

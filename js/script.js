@@ -32,7 +32,12 @@ const app = new Vue(
             ]
         },
         methods: {
-            
-        }
+            doneTodo: function () {
+
+            },
+            removeTodo: function () {
+                    
+            }
+        }        
     }
 )
