@@ -16,6 +16,7 @@ const app = new Vue(
     {
         el: '#app',
         data: {
+            newTodo: '',
             todos: [
                 {
                     text: 'Creare repo',
@@ -35,8 +36,16 @@ const app = new Vue(
             doneTodo: function (index) {
                 this.todos[index].done = !this.todos[index].done;
                 },
-            removeTodo: function () {
-                    
+            removeTodo: function (index) {
+                this.todos.splice(index, 1);    
+            },
+            addTodo: function (index) {
+                let obj = {
+                    text: this.newTodo,
+                    done: false
+                }
+                this.todos.unshift(obj);
+                this.newTodo = '';
             }
         }          
     }

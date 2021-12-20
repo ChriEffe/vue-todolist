@@ -29,9 +29,9 @@
             <!-- main content -->
             <div class="main-content">
                 <div class="main-header">
-                    <h2 style="margin:5px">To Do</h2>
-                    <input type="text" id="myInput" placeholder="Nuovo to-do">
-                    <span class="addBtn">Aggiungi</span>
+                    <h2 style="margin:5px">To Do List</h2>
+                    <input type="text" id="myInput" v-model="newTodo" @keyup.enter='addTodo' placeholder="Nuovo to-do">
+                    <span @click='addTodo' class="addBtn">Aggiungi</span>
                 </div>
                 <ul>
                     <li v-for='(element, index) in todos' class="flex">
